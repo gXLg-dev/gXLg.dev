@@ -1,0 +1,8 @@
+<div class="p">
+  <div class="heading" null-data="r => r.auth"></div>
+  <div class="text">
+    <form action="/api/logout" null-api="async (r, s) => { await r.logout(); s.redirect('/'); }">
+      <input class="but" type="submit" value="Logout">
+    </form>
+  </div>
+</div>

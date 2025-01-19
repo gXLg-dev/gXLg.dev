@@ -1,0 +1,25 @@
+{
+  "name": "gxlg.dev",
+  "version": "1.0.0",
+  "description": "Company/personal website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gXLg-dev/gXLg.dev.git"
+  },
+  "author": "gXLg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gXLg-dev/gXLg.dev/issues"
+  },
+  "homepage": "https://github.com/gXLg-dev/gXLg.dev#readme",
+  "dependencies": {
+    "nodemailer": "^6.9.16",
+    "nulls": "^2.2.2",
+    "nulls-auth": "^1.1.2",
+    "nulls-state": "^1.0.1"
+  }
+}

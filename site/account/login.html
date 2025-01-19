@@ -1,0 +1,34 @@
+<div class="p">
+  <div class="heading">Login</div>
+  <div class="text">
+    Welcome to gXLg.dev! Login now!
+
+    <form class="f" action="/api/login" null-api="$./lib/auth/login.js">
+      <input type="hidden" name="verify" null-tag="r => ['value', r.query.verify]">
+
+      <label>
+        Enter your email:
+        <input class="inp" type="email" name="email" autocomplete="email">
+      </label>
+
+      <label>
+        Enter your password:
+        <input class="inp" type="password" name="password" autocomplete="current-password">
+      </label>
+
+      <label>
+        Confirm you are human:
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAAxRNMWDZwEtqvXz" data-action="login" data-size="flexible"></div>
+        <div class="tip">If the captcha doesn't load, try refreshing the page.</div>
+      </label>
+
+      <input class="but" type="submit" value="Login!">
+      <div class="error" null-data="r => r.popState('login-error') ?? ''"></div>
+    </form>
+
+    Don't have an account yet? <a class="link" href="/account/register">Register</a>
+  </div>
+</div>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"></script>
+<script> turnstile.render(".cf-turnstile"); </script>

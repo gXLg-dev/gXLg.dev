@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Play&display=swap');
+@import url('/static/css/body.css');
+@import url('/static/css/navbar.css');
+@import url('/static/css/clickable.css');
+
+:root {
+  /* color scheme */
+  --black:  #0a0807;
+  --brown:  #422d23;
+  --beige:  #995d4c;
+  --orange: #b85731;
+  --yellow: #f9ae77;
+  --white:  #fde4cf;
+
+  /* fonts */
+  --heading: 1em "Concert One", sans-serif;
+  --text:    1em "Play", sans-serif;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  color: var(--black);
+  background-color: var(--white);
+
+  font: var(--text);
+}

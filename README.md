@@ -1,2 +1,2 @@
 # gXLg.dev
-The company website
+Company/personal website.

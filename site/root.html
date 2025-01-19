@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <link rel="icon" href="/static/avatar.png">
+    <title null-data="r => r.page.title"></title>
+
+    <link rel="stylesheet" href="/static/css/main.css">
+  </head>
+
+  <body>
+    <div id="outer">
+      <div id="header">
+        <div id="navbar" null-list="r => r.page.navbar" null-container="() => 'partials/navitem.html'"></div>
+        <a id="account" href="/account">
+          <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="20" r="20" />
+            <path d="M10,100 H90 V70 Q50,30,10,70 V100 Z" />
+          </svg>
+        </a>
+      </div>
+
+      <div id="content" null-container="r => r.page.id"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<div class="p">
+  <div class="heading">Register</div>
+  <div class="text">
+    Welcome to gXLg.dev! To access some features
+    on this website, you will need an account.
+    Register now!
+
+    <form class="f" action="/api/register" null-api="$./lib/auth/register.js">
+      <label>
+        Enter an email, which you have access to:
+        <input class="inp" name="email" type="email" autocomplete="email">
+      </label>
+
+      <label>
+        Choose a secure password:
+        <input class="inp" name="password" type="password" autocomplete="new-password">
+      </label>
+
+      <label>
+        Repeat the password:
+        <input class="inp" name="repeat" type="password" autocomplete="new-password">
+      </label>
+
+      <label>
+        Confirm you are human:
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAAxRNMWDZwEtqvXz" data-action="register" data-size="flexible"></div>
+        <div class="tip">If the captcha doesn't load, try refreshing the page.</div>
+      </label>
+
+      <input class="but" type="submit" value="Register!">
+      <div class="error" null-data="r => r.popState('register-error') ?? ''"></div>
+
+    </form>
+  </div>
+</div>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"></script>
+<script> turnstile.render(".cf-turnstile"); </script>

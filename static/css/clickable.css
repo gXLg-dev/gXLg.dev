@@ -1,0 +1,41 @@
+.inp, .but {
+  padding: 3px;
+  border: 1px solid var(--black);
+  font: var(--text);
+  color: var(--black);
+}
+
+.inp {
+  background-color: var(--orange);
+}
+.inp:hover {
+  background-color: var(--yellow);
+}
+.inp:focus {
+  outline: transparent;
+}
+
+.inp:is(:autofill, :-webkit-autofill) {
+  border: 1px solid var(--orange);
+}
+
+
+.but {
+  background-color: var(--orange);
+}
+.but:hover {
+  background-color: var(--yellow);
+}
+
+.inp::placeholder {
+  color: var(--brown);
+}
+
+
+.link {
+  color: inherit;
+  text-decoration: underline;
+}
+.link:hover {
+  color: var(--orange);
+}

@@ -1,0 +1,61 @@
+#navbar {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  overflow: scroll;
+  -ms-overflow-style: none;
+
+  scrollbar-width: none;
+
+  color: var(--black);
+}
+#navbar::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: var(--black);
+
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  font: var(--heading);
+  font-size: 20px;
+
+  height: 40px;
+  padding: 10px 15px 10px 15px;
+  position: relative;
+  z-index: 1;
+
+  background-color: var(--beige);
+  flex-shrink: 0;
+}
+.nav-item:hover {
+  background-color: var(--yellow);
+}
+
+/* separators */
+.nav-item:not(:first-child):before {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 20px;
+  height: 100%;
+  content: "";
+  z-index: -1;
+  background-size: 100% 100%;
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+}
+
+.nav-item:not(:first-child) {
+  padding-left: 20px;
+}
+.nav-item:not(:first-child):before {
+  background-color: var(--brown);
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2" preserveAspectRatio="none"><polygon points="0,0 1,0 2,1 1,2 0,2 1,1" /></svg>');
+}
