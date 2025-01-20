@@ -8,35 +8,38 @@ const nstate = require("nulls-state");
 const config = require("./config.json");
 const { getPage } = require("./lib/pages.js");
 
-const auth = nauth({
-  "path": "./db/users.badb",
-  "secret": config.jwt_secret,
-  "username": 254,
-  "secure": PROD,
-  "verify": true,
-  "param": "email"
-});
+(async () => {
 
-const state = nstate({
-  "secret": config.jwt_secret,
-  "secure": PROD
-});
+  const auth = nauth({
+    "path": "./db/users.badb",
+    "secret": config.jwt_secret,
+    "username": 254,
+    "secure": PROD,
+    "verify": true,
+    "param": "email"
+  });
 
-nulls({
-  "init": (app, server) => {
-    process.on("SIGINT", () => {
-      server.close();
-      console.log("\rShutting down...");
-    });
-  },
-  "hook": async (req, res) => {
-    await auth(req, res);
-    state(req, res);
-    req.page = getPage(req.path, req.auth);
-  },
-  "nulls": "./site",
-  "static": "./static",
-  "ready": () => console.log("Server up!"),
-  "port": PROD ? parseInt(process.argv[2]) : 8080,
-  "https": PROD
-});
+  const state = nstate({
+    "secret": config.jwt_secret,
+    "secure": PROD
+  });
+
+  const server = await nulls({
+    "hook": async (req, res) => {
+      await auth(req, res);
+      state(req, res);
+      if (req.method == "GET") { req.page = getPage(req.path, req.auth); }
+    },
+    "nulls": "./site",
+    "static": "./static",
+    "ready": () => console.log("Server up!"),
+    "port": PROD ? parseInt(process.argv[2]) : 8080,
+    "https": PROD
+  });
+
+  process.on("SIGINT", () => {
+    server.close();
+    console.log("\rShutting down...");
+  });
+
+})();
