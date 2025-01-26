@@ -18,8 +18,15 @@
   "homepage": "https://github.com/gXLg-dev/gXLg.dev#readme",
   "dependencies": {
     "nodemailer": "^6.9.16",
-    "nulls": "^2.3.2",
+    "nulls": "^2.4.0",
     "nulls-auth": "^1.1.2",
     "nulls-state": "^1.0.1"
+  },
+  "overrides": {
+    "nulls": {
+      "cheerio": {
+        "undici": "6.21.1"
+      }
+    }
   }
 }

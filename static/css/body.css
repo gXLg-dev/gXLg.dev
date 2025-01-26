@@ -1,9 +1,11 @@
 #outer {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 #header {
+  flex: none;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -29,6 +31,14 @@
   padding: 10px;
   background-color: var(--white);
   color: var(--black);
+}
+
+#footer {
+  flex: none;
+  padding: 20px;
+  background-color: var(--beige);
+  color: var(--black);
+  font-size: 12px;
 }
 
 .p {
