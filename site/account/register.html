@@ -1,4 +1,4 @@
-<div class="p">
+<div class="card">
   <div class="heading">Register</div>
   <div class="text">
     Welcome to gXLg.dev! To access some features
@@ -23,14 +23,15 @@
 
       <label>
         Confirm you are human:
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAAAxRNMWDZwEtqvXz" data-action="register" data-size="flexible" data-response-field-name="captcha"></div>
-        <div class="tip">If the captcha doesn't load, try refreshing the page.</div>
+        <div class="cf-turnstile" null-tag="() => ['data-sitekey', require('./config.json').turnstile.site]" data-action="register" data-size="flexible" data-response-field-name="turnstile"></div>
+        <div class="tip">If the test doesn't load, try refreshing the page.</div>
       </label>
 
       <input class="but" type="submit" value="Register!">
       <div class="error" null-data="r => r.popState('register-error') ?? ''"></div>
-
     </form>
+
+    Already have an account? <a class="link" href="/account/login">Login</a>
   </div>
 </div>
 

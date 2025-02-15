@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@1");
 @import url("https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css");
-@import url("https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css");
+@import url("https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css");
 
 .micon, .ricon, .dicon {
   position: relative;
   color: var(--brown);
-  font-size: 15px;
+  font-size: 0.8em;
   margin-right: 2px;
+}
+
+.heading .micon,
+.heading .ricon,
+.heading .dicon {
+  color: inherit;
 }
 
 .micon {

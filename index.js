@@ -7,6 +7,7 @@ const nstate = require("nulls-state");
 
 const config = require("./config.json");
 const { getPage } = require("./lib/pages.js");
+const preprocessor = require("./lib/preprocessor.js");
 
 (async () => {
 
@@ -34,7 +35,8 @@ const { getPage } = require("./lib/pages.js");
     "static": "./static",
     "ready": () => console.log("Server up!"),
     "port": PROD ? parseInt(process.argv[2]) : 8080,
-    "https": PROD
+    "https": PROD,
+    preprocessor
   });
 
   process.on("SIGINT", () => {

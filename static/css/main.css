@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Play&display=swap');
 @import url('/static/css/body.css');
+@import url('/static/css/text.css');
 @import url('/static/css/navbar.css');
 @import url('/static/css/clickable.css');
+@import url('/static/css/icons.css');
 
 :root {
   /* color scheme */

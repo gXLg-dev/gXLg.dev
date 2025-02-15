@@ -1,4 +1,4 @@
-<div class="p">
+<div class="card">
   <div class="heading">Login</div>
   <div class="text">
     Welcome to gXLg.dev! Login now!
@@ -18,8 +18,8 @@
 
       <label>
         Confirm you are human:
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAAAxRNMWDZwEtqvXz" data-action="login" data-size="flexible" data-response-field-name="captcha"></div>
-        <div class="tip">If the captcha doesn't load, try refreshing the page.</div>
+        <div class="cf-turnstile" null-tag="() => ['data-sitekey', require('./config.json').turnstile.site]" data-action="login" data-size="flexible" data-response-field-name="turnstile"></div>
+        <div class="tip">If the test doesn't load, try refreshing the page.</div>
       </label>
 
       <input class="but" type="submit" value="Login!">
@@ -29,6 +29,5 @@
     Don't have an account yet? <a class="link" href="/account/register">Register</a>
   </div>
 </div>
-
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"></script>
 <script> turnstile.render(".cf-turnstile"); </script>

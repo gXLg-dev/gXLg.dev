@@ -19,7 +19,7 @@
   "dependencies": {
     "axios": "^1.7.9",
     "nodemailer": "^6.9.16",
-    "nulls": "^2.4.0",
+    "nulls": "^2.5.3",
     "nulls-auth": "^1.1.2",
     "nulls-state": "^1.0.1"
   },
