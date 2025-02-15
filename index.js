@@ -33,6 +33,7 @@ const preprocessor = require("./lib/preprocessor.js");
     },
     "nulls": "./site",
     "static": "./static",
+    "uploads": false,
     "ready": () => console.log("Server up!"),
     "port": PROD ? parseInt(process.argv[2]) : 8080,
     "https": PROD,
