@@ -1,9 +1,11 @@
-<div class="card">
-  <div class="heading">Account</div>
-  <div class="text">
-    Logged in as <span class="keyword" null-data="r => r.auth"></span>
-    <form action="/api/logout" null-api="async (r, s) => { await r.logout(); s.redirect('/'); }">
-      <input class="but" type="submit" value="Logout">
-    </form>
+<div class="single-card">
+  <div class="card">
+    <div class="heading">Account</div>
+    <div class="text">
+      Logged in as <span class="keyword" null-data="r => r.auth"></span>
+      <form action="/api/logout" null-api="async (r, s) => { await r.logout(); s.redirect('/'); }">
+        <input class="but" type="submit" value="Logout">
+      </form>
+    </div>
   </div>
 </div>

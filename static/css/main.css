@@ -31,3 +31,12 @@ body {
 
   font: var(--text);
 }
+
+table {
+  border-spacing: 0;
+}
+
+ul {
+  margin: 6px 0 6px 0;
+  padding-left: 18px;
+}

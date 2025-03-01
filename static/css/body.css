@@ -40,17 +40,64 @@
   font-size: 12px;
 }
 
+/* common */
+.single-card {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.important-text, .info-text {
+  height: 100%;
+}
+.info-text .col2 {
+  background-color: var(--yellow);
+}
+
 /* mobile */
-@media screen and (max-width: 500px) {
-  #content {
+@media screen and (max-width: 1000px) {
+  .important-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 10px;
+    gap: 10px;
+  }
+  .info-text .col1, .info-text .col2 {
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 }
 
 /* desktop */
-@media screen and (min-width: 501px) {
-  #content {
-    padding: 50px 200px 50px 200px;
-    text-align: center;
+@media screen and (min-width: 1001px) {
+  .important-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+  }
+  .info-text {
+    display: flex;
+  }
+  .info-text .col1, .info-text .col2 {
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .info-text .col1 {
+    flex: 3;
+    align-items: flex-end;
+  }
+  .info-text .col2 {
+    flex: 2;
+    align-items: flex-start;
   }
 }
