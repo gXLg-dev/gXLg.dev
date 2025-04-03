@@ -9,7 +9,7 @@ const nturnstile = require("nulls-turnstile");
 
 const config = require("./config.json");
 const { getPage } = require("./lib/pages.js");
-const preprocessor = require("./lib/preprocessor");
+const preprocessor = require("./lib/preprocessor.js");
 
 (async () => {
 
