@@ -1,0 +1,34 @@
+Update your password!
+
+<form class="f" action="/api/account/chpw" null-api="$./lib/auth/chpw.js" null-access="r => r.auth">
+  <label>
+    Your current password:
+    <input class="inp" type="password" name="current-password" autocomplete="current-password">
+  </label>
+
+  <label>
+    Choose a secure new password:
+    <input class="inp" name="password" type="password" autocomplete="new-password">
+  </label>
+
+  <label>
+    Repeat the password:
+    <input class="inp" name="repeat" type="password" autocomplete="new-password">
+  </label>
+
+  <label>
+    One Time Password:
+    <input class="inp" type="number" name="otp" autocomplete="off">
+  </label>
+
+  <label>
+    Confirm you are human:
+    <div null-turnstile="change-password"></div>
+    <div class="tip">If the test doesn't load, try refreshing the page.</div>
+  </label>
+
+  <input class="but" type="submit" value="Change!">
+  <div class="error" null-data="^password-error"></div>
+</form>
+
+<div class="tip">Password security: <a class="link" href="https://haveibeenpwned.com/passwords">Have I Been Pwned?</a></div>

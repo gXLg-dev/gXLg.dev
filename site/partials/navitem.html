@@ -1,5 +1,1 @@
-<a
-  class="nav-item"
-  null-data="(r,s,n) => n ? n[0] : '<div class=\'logo\'><img src=\'/static/logo.jpg\' height=\'30\'></div>gXLg.dev'"
-  null-tag="(r,s,n) => ['href', n?n[1] : '/']"
-></a>
+<a class="nav-item" null-data="(r, s, n) => n[0]" null-attr="(r, s, n) => ({ 'href': n[1] })"></a>

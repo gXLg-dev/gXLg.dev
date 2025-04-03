@@ -1,0 +1,17 @@
+Update your Autheticator data!
+
+<form class="f" action="/api/account/uotp" null-api="$./lib/auth/uotp.js" null-access="r => r.auth">
+  <label>
+    Your password:
+    <input class="inp" type="password" name="password" autocomplete="current-password">
+  </label>
+
+  <label>
+    Confirm you are human:
+    <div null-turnstile="update-otp"></div>
+    <div class="tip">If the test doesn't load, try refreshing the page.</div>
+  </label>
+
+  <input class="but" type="submit" value="Update!">
+  <div class="error" null-data="^otp-error"></div>
+</form>

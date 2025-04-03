@@ -1,11 +1,16 @@
 <div class="single-card">
   <div class="card">
     <div class="heading">Account</div>
-    <div class="text">
-      Logged in as <span class="keyword" null-data="r => r.auth"></span>
-      <form action="/api/logout" null-api="async (r, s) => { await r.logout(); s.redirect('/'); }">
+    <div class="text" null-adder="#tools/admin.html" null-if="r => r.admin">
+      Email: <span class="keyword" null-data="r => r.auth"></span>
+      <form action="/api/auth/logout" null-api="async (r, s) => { await r.logout(); s.redirect('/'); }">
         <input class="but" type="submit" value="Logout">
       </form>
+
+      <div class="title">Account settings</div>
+      <a class="link" href="/account/change-password">Change Password</a>
+      <br>
+      <a class="link" href="/account/update-otp">Update Authenticator</a>
     </div>
   </div>
 </div>

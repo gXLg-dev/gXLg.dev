@@ -28,7 +28,7 @@
   overflow-wrap: break-word;
   background-color: var(--yellow);
 }
-.card>.text>.title {
+.card>.text .title {
   margin: 4px 0 4px 0;
   font: var(--heading);
   font-size: 20px;

@@ -19,7 +19,12 @@
 .inp:is(:autofill, :-webkit-autofill) {
   border: 1px solid var(--orange);
 }
-
+.inp[readonly] {
+  background-color: var(--white);
+}
+.inp::placeholder {
+  color: var(--brown);
+}
 
 .but {
   background-color: var(--orange);
@@ -28,9 +33,6 @@
   background-color: var(--yellow);
 }
 
-.inp::placeholder {
-  color: var(--brown);
-}
 
 
 .link {

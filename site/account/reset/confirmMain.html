@@ -1,0 +1,21 @@
+Confirm the reset of your account.
+<br><br>
+Go back to <a class="link" href="/account/login">login</a>.
+
+<form class="f" action="/api/auth/confirm-reset" null-api="$./lib/auth/confirm-reset.js" null-access="r => !r.auth">
+  <input type="hidden" name="verify" null-attr="r => ({ 'value': r.query.verify })">
+
+  <label>
+    Email:
+    <input class="inp" name="email" type="email" null-attr="r => ({ 'value': r.query.email })" readonly>
+  </label>
+
+  <label>
+    Confirm you are human:
+    <div null-turnstile="confirm-reset"></div>
+    <div class="tip">If the test doesn't load, try refreshing the page.</div>
+  </label>
+
+  <input class="but" type="submit" value="Confirm!">
+  <div class="error" null-data="^confirm-error"></div>
+</form>
