@@ -19,7 +19,7 @@
   "dependencies": {
     "badb": "^1.3.0",
     "nodemailer": "^6.10.0",
-    "nulls": "^2.9.1",
+    "nulls": "^2.9.2",
     "nulls-auth": "^2.0.0",
     "nulls-state": "^1.2.0",
     "nulls-turnstile": "^1.0.4"
