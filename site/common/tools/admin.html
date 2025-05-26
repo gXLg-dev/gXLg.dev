@@ -1,0 +1,74 @@
+<div class="title">Admin Tools</div>
+
+<div class="title">All Contracts</div>
+<div>
+  Active:
+  <ul null-list="async r => (await require('./lib/contracts').get_all_contracts()).filter(c => c.status == 2).reverse()" null-container="#common/partials/contract.html"></ul>
+  <hr>
+  Offers:
+  <ul null-list="async r => (await require('./lib/contracts').get_all_contracts()).filter(c => c.status == 1).reverse()" null-container="#common/partials/contract.html"></ul>
+  <hr>
+  Cancelled/Paid:
+  <ul null-list="async r => (await require('./lib/contracts').get_all_contracts()).filter(c => c.status >= 3).reverse()" null-container="#common/partials/contract.html"></ul>
+</div>
+
+<form class="f" action="/api/admin/invite" null-api="$./lib/auth/invite.js" null-access="r => r.admin">
+  <label>
+    Invite customer:
+    <input class="inp" type="email" name="email" autocomplete="off">
+  </label>
+  <input class="but" type="submit" value="Invite">
+  <div class="error" null-data="^invite-error"></div>
+</form>
+
+<form class="f" action="/api/admin/transparency-add" null-api="$./lib/transparency/add.js" null-access="r => r.admin">
+  <label>
+    Value:
+    <input class="inp" type="number" name="value" step="0.01" autocomplete="off">
+  </label>
+  <label>
+    Text:
+    <input class="inp" type="text" name="text" autocomplete="off">
+  </label>
+  <input class="but" type="submit" value="Make transparent!">
+  <div class="error" null-data="^transparency-error"></div>
+</form>
+
+<form class="f" action="/api/admin/create-offer" null-api="$./lib/contracts/add.js" null-access="r => r.admin">
+  <label>
+    Email:
+    <input class="inp" type="email" name="email" autocomplete="off">
+  </label>
+  <label>
+    Contract name:
+    <input class="inp" type="text" name="name" autocomplete="off">
+  </label>
+  <label>
+    Development fee:
+    <input class="inp" type="number" name="dev" step="0.01" autocomplete="off">
+  </label>
+  <label>
+    Hosting price:
+    <input class="inp" type="number" name="host" step="0.01" autocomplete="off">
+  </label>
+  <label>
+    Language:
+    <input class="inp" type="text" name="lang" autocomplete="off">
+  </label>
+  <input class="but" type="submit" value="Create Offer">
+  <div class="error" null-data="^offer-error"></div>
+</form>
+
+
+<form class="f" action="/api/admin/migrate-user" null-api="$./lib/auth/migrate.js" null-access="r => r.admin">
+  <label>
+    Old Email:
+    <input class="inp" type="email" name="email" autocomplete="off">
+  </label>
+  <label>
+    New Email:
+    <input class="inp" type="email" name="new-email" autocomplete="off">
+  </label>
+  <input class="but" type="submit" value="Migrate Account">
+  <div class="error" null-data="^migrate-error"></div>
+</form>

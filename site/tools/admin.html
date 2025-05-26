@@ -1,9 +1,0 @@
-<div class="title">Admin Tools</div>
-<form class="f" action="/api/admin/invite" null-api="$./lib/auth/invite.js" null-access="r => r.admin">
-  <label>
-    Invite customer:
-    <input class="inp" type="email" name="email" autocomplete="off">
-  </label>
-  <input class="but" type="submit" value="Invite">
-  <div class="error" null-data="^invite-error"></div>
-</form>

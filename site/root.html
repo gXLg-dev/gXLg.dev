@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head null-adder="#seo.html">
+<html nulls-attr="r => ({ 'lang': r.lang })">
+  <head null-adder="r => r.lang + '/seo.html'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
 
@@ -13,14 +13,22 @@
   <body>
     <div id="outer">
       <div id="header">
-        <div id="navbar" null-list="r => r.page.navbar" null-adder="#partials/navitem.html">
-          <a class="nav-item" href="/">
+        <div id="navbar" null-list="r => r.page.navbar" null-adder="#common/partials/navitem.html">
+          <a class="nav-item" null-attr="r => ({ 'href': '/' + r.lang })">
             <div class="logo">
               <img src="/static/logo.jpg" height="30">
             </div>gXLg.dev
           </a>
         </div>
-        <a id="account" href="/account">
+        <a id="langs" null-attr="r => ({ 'href': '/' + r.lang + '/langs' })">
+          <svg width="30" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" stroke-width="5" fill="none" />
+            <ellipse cx="50" cy="50" rx="25" ry="45" stroke-width="3" fill="none" />
+            <ellipse cx="50" cy="50" rx="10" ry="45" stroke-width="2" fill="none" />
+            <line x1="5" y1="50" x2="95" y2="50" stroke-width="3">
+          </svg>
+        </a>
+        <a id="account" null-attr="r => ({ 'href': '/' + r.lang + '/account' })">
           <svg width="30" viewBox="0 0 100 100">
             <circle cx="50" cy="20" r="20" />
             <path d="M10,100 H90 V70 Q50,30,10,70 V100 Z" />
@@ -28,14 +36,8 @@
         </a>
       </div>
 
-      <div id="content" null-container="r => r.page.id"></div>
-      <div id="footer">
-        This website is <a class="link" href="https://github.com/gXLg-dev/gXLg.dev">open source</a>
-        <br>
-        <a class="link" href="/imprint">Imprint</a> - <a class="link" href="/privacy">Privacy Policy</a>
-        <br>
-        Copyright gXLg.dev <span null-data="() => (new Date()).getFullYear()"></span>
-      </div>
+      <div id="content" null-container="r => r.lang + '/' + r.page.id"></div>
+      <div id="footer" null-container="r => r.lang + '/partials/footer.html'"></div>
     </div>
   </body>
 </html>

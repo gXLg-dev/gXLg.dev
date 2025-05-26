@@ -1,0 +1,17 @@
+Aktualisieren Sie Ihre Authenticator Daten!
+
+<form class="f" action="/api/account/uotp" null-api>
+  <label>
+    Ihr Passwort:
+    <input class="inp" type="password" name="password" autocomplete="current-password">
+  </label>
+
+  <label>
+    Bestätigen Sie, dass Sie ein Mensch sind:
+    <div null-turnstile="update-otp"></div>
+    <div class="tip">Falls der Test nicht lädt, versuchen Sie, die Seite neuzuladen.</div>
+  </label>
+
+  <input class="but" type="submit" value="Aktualisieren!">
+  <div class="error" null-data="^otp-error"></div>
+</form>

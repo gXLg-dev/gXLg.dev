@@ -1,0 +1,34 @@
+<div class="single-card">
+  <div class="card">
+    <div class="heading">Transparenz</div>
+    <div class="text">
+      Um Vertrauen aufzubauen, stelle ich
+      alle Informationen zu Einnahmen und Ausgaben
+      meines Unternehmens zur Verfügung.
+      <br><br>
+      Gesamtgewinn: <b><span null-data>
+        <script null-data>
+          const { array } = require("./lib/transparency");
+          return async () => {
+            const number = await array(e => e.reduce((a, b) => a + b.value, 0));
+            return (number / 100).toFixed(2);
+          };
+        </script>
+      </span>€</b>.
+      <br>
+      <br>
+      <table style="width: 100%; border-collapse: collapse;" null-list null-adder="#common/partials/income.html">
+        <script null-list>
+          const { array } = require("./lib/transparency");
+          return async () => {
+            return await array(e => e.map((a, i) => [a, i]).reverse());
+          };
+        </script>
+        <tr>
+          <th style="width: 20%;">Wert</th>
+          <th style="width: 80%;">Beschreibung</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

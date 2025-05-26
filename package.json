@@ -22,6 +22,7 @@
     "nulls": "^2.9.2",
     "nulls-auth": "^2.0.0",
     "nulls-state": "^1.2.0",
-    "nulls-turnstile": "^1.0.4"
+    "nulls-turnstile": "^1.0.4",
+    "stripe": "^18.1.1"
   }
 }

@@ -61,12 +61,17 @@
   position: relative;
   width: 100%;
 }
-.f input {
+.f input:not([type=checkbox]) {
   box-sizing: border-box;
   width: 100%;
 }
-.f label>* {
+.f label:not(.inline)>* {
   display: block;
+}
+
+.fi {
+  display: inline-block;
+  margin-left: 2px;
 }
 
 .cf-turnstile {

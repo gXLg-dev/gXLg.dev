@@ -1,0 +1,34 @@
+Verändern Sie Ihr Passwort!
+
+<form class="f" action="/api/account/chpw" null-api>
+  <label>
+    Ihr aktuelles Passwort:
+    <input class="inp" type="password" name="current-password" autocomplete="current-password">
+  </label>
+
+  <label>
+    Wählen Sie ein neues sicheres Passwort:
+    <input class="inp" name="password" type="password" autocomplete="new-password">
+  </label>
+
+  <label>
+    Wiederholen Sie das Passwort:
+    <input class="inp" name="repeat" type="password" autocomplete="new-password">
+  </label>
+
+  <label>
+    Ein-Mal Passwort:
+    <input class="inp" type="number" name="otp" autocomplete="off">
+  </label>
+
+  <label>
+    Bestätigen Sie, dass Sie ein Mensch sind:
+    <div null-turnstile="change-password"></div>
+    <div class="tip">Falls der Test nicht lädt, versuchen Sie, die Seite neuzuladen.</div>
+  </label>
+
+  <input class="but" type="submit" value="Verändern!">
+  <div class="error" null-data="^password-error"></div>
+</form>
+
+<div class="tip">Passwort Sicherheit: <a class="link" href="https://haveibeenpwned.com/passwords">Have I Been Pwned?</a></div>

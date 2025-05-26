@@ -1,0 +1,14 @@
+<div class="heading">One-Time Payment</div>
+<div class="text">
+  <div class="title" null-data="(r, s, d) => d.name"></div>
+  <div>
+    <a class="link" null-attr="(r, s, d) => ({ 'href': '/en/terms/' + d.terms })" null-data="(r, s, d) => 'Terms and Conditions (' + d.terms + ')'"></a> (applicable to this contract)<br>
+    Contract ID: <span class="keyword" null-data="(r, s, d) => d.id"></span><br>
+    Language: <span class="keyword" null-data="(r, s, d) => d.lang"></span><br>
+    Payment: Handled by Stripe<br>
+    Development Fee: <span null-data="(r, s, d) => (d.dev / 100).toFixed(2)"></span>€<br>
+    Paid Date: <span null-data="(r, s, d) => (new Date(parseInt(d.started_at)).toLocaleString(d.lang))"></span>
+    <br><br>
+    One-time payments are not refundable.
+  </div>
+</div>

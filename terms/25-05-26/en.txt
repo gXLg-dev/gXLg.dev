@@ -1,0 +1,142 @@
+# Terms and Conditions
+
+Effective as of: 26.05.2025 (April 26, 2025)
+Operator: Dmitry Plesunov, Jedelstetten 24, 82269 Geltendorf, Germany
+Legal Structure: Self-employed software development under German law
+Contact: gxlg@gmx.de
+
+
+
+0. Definitions
+
+In these Terms and Conditions, the following terms are used:
+
+* "I" / "me" / "my":
+  Refers to the provider: Dmitry Plesunov,
+  operating as a self-employed software developer in Germany.
+
+* "you" / "your":
+  Refers to you as the customer -
+  the person or organization using my services.
+
+* "we" / "us":
+  Refers to situations where collaboration or a shared step
+  between the provider and the customer is involved.
+
+* "project":
+  Refers to the digital product I create for you.
+
+* "contract":
+  Refers to the agreement between you and me regarding the
+  development and/or hosting of a project.
+
+
+
+1. What I Offer
+
+I develop and host digital projects - such as websites,
+web apps, and bots (e.g. Discord or Telegram bots).
+You pay a one-time development fee and a recurring
+monthly hosting fee for using my infrastructure.
+
+
+
+2. How We Make a Contract
+
+Before anything is billed, we'll talk about your project.
+Here's how it goes:
+
+* We discuss what you need.
+* I build the project for you.
+* You get 2 weeks to test everything without any payment obligation.
+* If you're satisfied, you confirm the contract in your online account.
+* Once confirmed, you are billed via Stripe. Your project then goes live.
+
+If you choose not to confirm, nothing happens.
+No project goes live, no billing takes place.
+
+
+
+3. Payment
+
+* All payments are processed via Stripe.
+* You'll receive a receipt for each payment.
+* The monthly subscription starts only after contract confirmation.
+* No refunds are given for the current billing period after confirmation,
+  as the test phase already happened beforehand.
+* If your payment method fails, just contact me. I'll cancel the current
+  contract and send a new one once the payment details are updated.
+
+
+
+4. Cancellation
+
+You can cancel your subscription at any time via your customer portal.
+Here's what happens:
+
+* Cancellation is effective immediately in the system (within ~10 minutes).
+* Your project stays online until the end of the current billing period,
+  then it goes offline.
+* If you cancel by mistake or need a new payment setup, just contact me -
+  we can start a new contract.
+* If you've lost access to your account/email, email me with proof
+  (like receipts), and I'll cancel or transfer the account manually.
+
+Once a contract is cancelled, it can't be reactivated. If you want to continue,
+a new contract will be offered (with the development fee waived if no
+changes are needed).
+
+
+
+5. Uptime and Service
+
+* I aim for 24/7 uptime. Exceptions include things outside my control
+  (e.g. power outages, natural disasters).
+* If downtime is my fault, I'll fix it as soon as possible.
+* If downtime lasts longer than a full month, I'll refund the hosting
+  fee for that month.
+* Backups are available on request, but not done automatically.
+* Support includes bugfixes and basic help. Bigger feature requests
+  require a new contract.
+
+
+
+6. Usage Limits
+
+* Each project has a RAM usage limit, which we'll agree on beforehand.
+
+
+
+7. Legal Use and Responsibility
+
+* You must not host illegal content or services on my servers.
+* You're also not allowed to violate the terms of third-party
+  services (e.g. running a Discord bot that collects user data without permission).
+* If illegal or abusive behavior is detected, I reserve the right to terminate
+  the service and cancel the contract without notice.
+* I'm not responsible for any user-generated content or the legal compliance
+  of your project - that's your job.
+
+
+
+8. Intellectual Property
+
+* I retain ownership of the project code unless we explicitly agree to open-source it.
+* If open-sourced, I'll release it under the MIT License.
+* You have the right to use and operate the service during the active contract term.
+
+
+
+9. Complaints and Disputes
+
+* Complaints about the service or hosting can be sent directly to me.
+* Complaints about your project or user experience must be handled by you.
+* German law applies to this agreement.
+* Any disputes shall be resolved under the jurisdiction of German courts.
+
+
+
+10. Final Notes
+
+* These Terms may be updated in the future.
+* Changes only apply to new contracts.

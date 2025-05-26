@@ -1,0 +1,21 @@
+Bestätigen Sie das Zurücksetzen Ihres Accounts.
+<br><br>
+Zurück zur <a class="link" href="/de/account/login">Anmeldung</a>.
+
+<form class="f" action="/api/auth/confirm-reset" null-api>
+  <input type="hidden" name="verify" null-attr="r => ({ 'value': r.query.verify })">
+
+  <label>
+    Email:
+    <input class="inp" name="email" type="email" null-attr="r => ({ 'value': r.query.email })" readonly>
+  </label>
+
+  <label>
+    Bestätigen Sie, dass Sie ein Mensch sind:
+    <div null-turnstile="confirm-reset"></div>
+    <div class="tip">Falls der Test nicht lädt, versuchen Sie, die Seite neuzuladen.</div>
+  </label>
+
+  <input class="but" type="submit" value="Bestätigen!">
+  <div class="error" null-data="^confirm-error"></div>
+</form>

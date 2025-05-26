@@ -1,0 +1,6 @@
+<tr style="border-top: 1px solid var(--black);">
+  <td style="padding: 4px;" align="center" null-data="(r, s, d) => (d[0].value > 0 ? '+' : '') + (d[0].value / 100).toFixed(2) + '€'"></td>
+  <td style="padding: 4px;" align="center" null-adder="#common/tools/delete.html" null-if="r => r.admin">
+    <span null-data="(r, s, d) => d[0].text"></span>
+  </td>
+</tr>

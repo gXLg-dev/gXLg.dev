@@ -1,0 +1,12 @@
+<form class="fi" action="/api/admin/transparency-delete" null-api null-access="r => r.admin">
+  <script null-api>
+    const { array } = require("./lib/transparency");
+    return async (r, s) => {
+      const index = parseInt(r.body.index);
+      await array(e => e.splice(index, 1));
+      s.redirect("/transparency");
+    }
+  </script>
+  <input type="hidden" name="index" null-attr="(r, s, d) => ({ 'value': d[1] })">
+  <input class="but" type="submit" value="delete">
+</form>

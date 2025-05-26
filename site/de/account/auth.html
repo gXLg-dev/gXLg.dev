@@ -1,0 +1,30 @@
+<div class="single-card">
+  <div class="card">
+    <div class="heading">Account</div>
+    <div class="text" null-adder="#common/tools/admin.html" null-if="r => r.admin">
+      Email: <span class="keyword" null-data="r => r.auth"></span>
+      <form class="fi" action="/api/auth/logout" null-api>
+        <input class="but" type="submit" value="Abmelden">
+      </form>
+
+      <div class="title">Account Einstellungen</div>
+      <a class="link" href="/de/account/change-password">Passwort verändern</a>
+      <br>
+      <a class="link" href="/de/account/update-otp">Authenticator Aktualisieren</a>
+      <br>
+      <br>
+
+      <div class="title">Verträge</div>
+      <div>
+        Laufende:
+        <ul null-list="async r => (await require('./lib/contracts').get_contracts(r.hashed(r.auth))).filter(c => c.status == 2).reverse()" null-container="#common/partials/contract.html"></ul>
+        <hr>
+        Angebote:
+        <ul null-list="async r => (await require('./lib/contracts').get_contracts(r.hashed(r.auth))).filter(c => c.status == 1).reverse()" null-container="#common/partials/contract.html"></ul>
+        <hr>
+        Gekündigte/Bezahlte:
+        <ul null-list="async r => (await require('./lib/contracts').get_contracts(r.hashed(r.auth))).filter(c => c.status >= 3).reverse()" null-container="#common/partials/contract.html"></ul>
+      </div>
+    </div>
+  </div>
+</div>

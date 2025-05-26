@@ -26,6 +26,18 @@
   color: var(--brown);
 }
 
+.inp::-webkit-outer-spin-button,
+.inp::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.inp[type=number] {
+  -moz-appearance: textfield;
+}
+.inp[type=checkbox] {
+  accent-color: var(--orange);
+}
+
 .but {
   background-color: var(--orange);
 }

@@ -1,0 +1,16 @@
+<div class="heading">Angebot</div>
+<div class="text">
+  <div class="title" null-data="(r, s, d) => d.name"></div>
+  <div>
+    <a class="link" null-attr="(r, s, d) => ({ 'href': '/de/terms/' + d.terms })" null-data="(r, s, d) => 'AGB (' + d.terms + ')'"></a> (geltend für diesen Vertrag)<br>
+    Vertrag ID: <span class="keyword" null-data="(r, s, d) => d.id"></span><br>
+    Sprache: <span class="keyword" null-data="(r, s, d) => d.lang"></span><br>
+    Zahlung: Von Stripe verwaltet<br>
+    Entwicklung Kosten: <span null-data="(r, s, d) => (d.dev / 100).toFixed(2)"></span>€<br>
+    Hosting Preis: <span null-data="(r, s, d) => (d.host / 100).toFixed(2)"></span>€ / Monat<br>
+    Startdatum: Sofort nach dem Abschluss<br>
+    Enddatum: <span null-data="(r, s, d) => d.host == 0 ? 'Nicht anwendbar auf Einmalzahlungen' : 'Jederzeit kündigbar'"></span>
+    <br><br>
+    <div null-arg="async (r, e, d) => await require('./lib/contracts').get_url(d.id)" null-container="#de/partials/payment.html"></div>
+  </div>
+</div>

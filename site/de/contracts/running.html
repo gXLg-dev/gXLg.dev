@@ -1,0 +1,25 @@
+<div class="heading">Laufender Vertrag</div>
+<div class="text">
+  <div class="title" null-data="(r, s, d) => d.name"></div>
+  <div>
+    <a class="link" null-attr="(r, s, d) => ({ 'href': '/de/terms/' + d.terms })" null-data="(r, s, d) => 'AGB (' + d.terms + ')'"></a> (geltend für diesen Vertrag)<br>
+    Vertrag ID: <span class="keyword" null-data="(r, s, d) => d.id"></span><br>
+    Sprache: <span class="keyword" null-data="(r, s, d) => d.lang"></span><br>
+    Zahlung: Von Stripe verwaltet<br>
+    Entwicklung Kosten: <span null-data="(r, s, d) => (d.dev / 100).toFixed(2)"></span>€<br>
+    Hosting Preis: <span null-data="(r, s, d) => (d.host / 100).toFixed(2)"></span>€ / Monat<br>
+    Startdatum: <span null-data="(r, s, d) => (new Date(parseInt(d.started_at)).toLocaleString(d.lang))"></span><br>
+    Enddatum: Jederzeit kündigbar
+    <br><br>
+    <div null-data="^cancel-success"></div>
+    <form class="f" action="/api/contracts/cancel" null-api>
+      <input type="hidden" name="id" null-attr="(r, s, d) => ({ 'value': d.id })">
+      <label class="inline">
+        <input class="inp" name="agree" type="checkbox">
+        Ich bestätige, dass ich den Vertrag kündigen möchte.
+      </label>
+      <input class="but" type="submit" value="Vertrag Kündigen">
+      <div class="error" null-data="^cancel-error"></div>
+    </form>
+  </div>
+</div>

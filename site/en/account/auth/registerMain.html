@@ -1,0 +1,40 @@
+Welcome to gXLg.dev!<br>
+Register to get access to my services.
+<br><br>
+Go to <a class="link" href="/en/account/login">login</a>.
+
+<form class="f" action="/api/auth/register" null-api="$./lib/auth/register.js" null-access="r => !r.auth">
+  <input type="hidden" name="verify" null-attr="r => ({ 'value': r.query.verify })">
+
+  <label>
+    Your email:
+    <input class="inp" name="email" type="email" autocomplete="email" null-attr="r => ({ 'value': r.query.email ?? null })">
+  </label>
+
+  <label>
+    Choose a secure password:
+    <input class="inp" name="password" type="password" autocomplete="new-password">
+  </label>
+
+  <label>
+    Repeat the password:
+    <input class="inp" name="repeat" type="password" autocomplete="new-password">
+  </label>
+
+  <label>
+    Confirm you are human:
+    <div null-turnstile="register"></div>
+    <div class="tip">If the test doesn't load, try refreshing the page.</div>
+  </label>
+
+  <label class="inline">
+    <input class="inp" name="agree" type="checkbox">
+    I confirm that I have read <a class="link" href="/en/privacy">Privacy Policy</a> and <a class="link" href="/en/terms">Terms and Conditions</a>
+    and accept them.
+  </label>
+
+  <input class="but" type="submit" value="Register!">
+  <div class="error" null-data="^register-error"></div>
+</form>
+
+<div class="tip">Password security: <a class="link" href="https://haveibeenpwned.com/passwords">Have I Been Pwned?</a></div>

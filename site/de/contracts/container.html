@@ -1,0 +1,13 @@
+<div class="card" null-container>
+  <script null-container>
+    return (r, s, d) => {
+      if (d == null || (!r.admin && r.hashed(r.auth) != d.name)) return "de/contracts/noaccess.html";
+      return d.lang + "/contracts/" + ({
+        1: "offer",
+        2: "running",
+        3: "cancelled",
+        4: "paid"
+      }[d.status]) + ".html";
+    };
+  </script>
+</div>

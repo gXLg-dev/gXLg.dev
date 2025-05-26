@@ -1,0 +1,25 @@
+<div class="heading">Active Contract</div>
+<div class="text">
+  <div class="title" null-data="(r, s, d) => d.name"></div>
+  <div>
+    <a class="link" null-attr="(r, s, d) => ({ 'href': '/en/terms/' + d.terms })" null-data="(r, s, d) => 'Terms and Conditions (' + d.terms + ')'"></a> (applicable to this contract)<br>
+    Contract ID: <span class="keyword" null-data="(r, s, d) => d.id"></span><br>
+    Language: <span class="keyword" null-data="(r, s, d) => d.lang"></span><br>
+    Payment: Handled by Stripe<br>
+    Development Fee: <span null-data="(r, s, d) => (d.dev / 100).toFixed(2)"></span>€<br>
+    Hosting Price: <span null-data="(r, s, d) => (d.host / 100).toFixed(2)"></span>€ / month<br>
+    Start Date: <span null-data="(r, s, d) => (new Date(parseInt(d.started_at)).toLocaleString(d.lang))"></span><br>
+    End Date: Cancellable any time
+    <br><br>
+    <div null-data="^cancel-success"></div>
+    <form class="f" action="/api/contracts/cancel" null-api="$./lib/contracts/cancel.js" null-access="(r, s, d) => r.admin || r.hashed(r.auth) == d.user">
+      <input type="hidden" name="id" null-attr="(r, s, d) => ({ 'value': d.id })">
+      <label class="inline">
+        <input class="inp" name="agree" type="checkbox">
+        I confirm that I want to cancel to contract
+      </label>
+      <input class="but" type="submit" value="Cancel contract">
+      <div class="error" null-data="^cancel-error"></div>
+    </form>
+  </div>
+</div>

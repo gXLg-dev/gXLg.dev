@@ -1,6 +1,7 @@
 const PROD = !!process.argv[2];
 const base = PROD ? "https://gxlg.dev" : "http://localhost:8080";
-module.exports = { PROD, base };
+const defaultLang = "de";
+module.exports = { PROD, base, defaultLang };
 
 const { nulls } = require("nulls");
 const nauth = require("nulls-auth");
@@ -9,7 +10,10 @@ const nturnstile = require("nulls-turnstile");
 
 const config = require("./config.json");
 const { getPage } = require("./lib/pages.js");
-const preprocessor = require("./lib/preprocessor.js");
+const { icons } = require("./lib/preprocess.js");
+const { translate } = require("./lib/translation.js");
+
+const { polling } = require("./lib/contracts");
 
 (async () => {
 
@@ -46,8 +50,18 @@ const preprocessor = require("./lib/preprocessor.js");
     "plugins": [auth, state, turnstile],
     "hook": async (req, res) => {
       if (req.method == "GET") {
-        req.page = getPage(req.path, req.auth);
+        const path = (req.path ?? "").split("/").filter(p => p);
+        let lang = defaultLang;
+        if (["de", "en"].includes(path[0])) {
+          lang = path.shift();
+        }
+        req.lang = lang;
+        req.page = getPage(path, req.auth);
+
         res.status(req.page.status);
+        res.putState("lang", lang);
+      } else {
+        req.lang = req.getState("lang") ?? defaultLang;
       }
 
       req.admin = (req.auth == config.admin);
@@ -59,10 +73,16 @@ const preprocessor = require("./lib/preprocessor.js");
     "port": PROD ? parseInt(process.argv[2]) : 8080,
     "forceHTTPS": PROD,
     "domain": "gXLg.dev",
-    preprocessor
+    "preprocessor": icons,
+    "textprocessor": (txt, req) => translate(txt, req.lang),
+
+    "redirects": {
+      "/:lang/landing/contracts/:id": req => "/" + req.params.lang + "/account/contracts/" + req.params.id
+    }
   });
 
   process.on("SIGINT", () => {
+    clearInterval(polling);
     server.close();
     console.log("\rShutting down...");
   });

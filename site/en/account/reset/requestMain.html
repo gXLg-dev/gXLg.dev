@@ -1,0 +1,21 @@
+Forgot your password?<br>
+Lost access to your Authenticator?<br>
+Request a reset of your account!
+<br><br>
+Go back to <a class="link" href="/en/account/login">login</a>.
+
+<form class="f" action="/api/auth/request-reset" null-api="$./lib/auth/request-reset.js" null-access="r => !r.auth">
+  <label>
+    Your email:
+    <input class="inp" type="email" name="email" autocomplete="email">
+  </label>
+
+  <label>
+    Confirm you are human:
+    <div null-turnstile="request-reset"></div>
+    <div class="tip">If the test doesn't load, try refreshing the page.</div>
+  </label>
+
+  <input class="but" type="submit" value="Request!">
+  <div class="error" null-data="^request-error"></div>
+</form>

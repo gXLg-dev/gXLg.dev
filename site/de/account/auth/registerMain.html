@@ -1,0 +1,40 @@
+Willkommen bei gXLg.dev!<br>
+Registrieren Sie sich, um Zugang zu meinen Dienstleistungen zu bekommen.
+<br><br>
+Zur <a class="link" href="/de/account/login">Anmeldung</a>.
+
+<form class="f" action="/api/auth/register" null-api>
+  <input type="hidden" name="verify" null-attr="r => ({ 'value': r.query.verify })">
+
+  <label>
+    Ihre Email:
+    <input class="inp" name="email" type="email" autocomplete="email" null-attr="r => ({ 'value': r.query.email ?? null })">
+  </label>
+
+  <label>
+    Wählen Sie ein sicheres Passwort:
+    <input class="inp" name="password" type="password" autocomplete="new-password">
+  </label>
+
+  <label>
+    Wiederholen Sie das Passwort:
+    <input class="inp" name="repeat" type="password" autocomplete="new-password">
+  </label>
+
+  <label>
+    Bestätigen Sie, dass Sie ein Mensch sind:
+    <div null-turnstile="register"></div>
+    <div class="tip">Falls der Test nicht lädt, versuchen Sie, die Seite neuzuladen.</div>
+  </label>
+
+  <label class="inline">
+    <input class="inp" name="agree" type="checkbox">
+    Ich bestätige, dass ich die <a class="link" href="/de/privacy">Datenschutzerklärung</a> und <a class="link" href="/de/terms">AGB</a>
+    gelesen habe und diese akzeptiere.
+  </label>
+
+  <input class="but" type="submit" value="Registrieren!">
+  <div class="error" null-data="^register-error"></div>
+</form>
+
+<div class="tip">Passwort Sicherheit: <a class="link" href="https://haveibeenpwned.com/passwords">Have I Been Pwned?</a></div>

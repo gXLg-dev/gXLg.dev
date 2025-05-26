@@ -1,0 +1,40 @@
+<div class="single-card">
+  <div class="card">
+    <div class="heading">Anmeldung</div>
+    <div class="text">
+      Willkommen bei gXLg.dev! Melden Sie sich jetzt an!
+      <br><br>
+      Sie können sich nicht anmelden? <a class="link" href="/de/account/reset/request">Account zurücksetzen</a>
+
+      <form class="f" action="/api/auth/login" null-api>
+        <input type="hidden" name="verify" null-attr="r => ({ 'value': r.query.verify })">
+
+        <label>
+          Email:
+          <input class="inp" type="email" name="email" autocomplete="email">
+        </label>
+
+        <label>
+          Ihr Passwort:
+          <input class="inp" type="password" name="password" autocomplete="current-password">
+        </label>
+
+        <label>
+          Ein-Mal Passwort:
+          <input class="inp" type="number" name="otp" autocomplete="off">
+        </label>
+
+        <label>
+          Bestätigen Sie, dass Sie ein Mensch sind:
+          <div null-turnstile="login"></div>
+          <div class="tip">Falls der Test nicht lädt, versuchen Sie, die Seite neuzuladen.</div>
+        </label>
+
+        <input class="but" type="submit" value="Anmelden!">
+        <div class="error" null-data="^login-error"></div>
+      </form>
+
+      <div class="tip">Passwort Sicherheit: <a class="link" href="https://haveibeenpwned.com/passwords">Have I Been Pwned?</a></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+Passwort vergessen?<br>
+Zugriff zum Authenticator verloren?<br>
+Fragen Sie eine Zurücksetzung Ihres Accounts an!
+<br><br>
+Zurück zur <a class="link" href="/de/account/login">Anmeldung</a>.
+
+<form class="f" action="/api/auth/request-reset" null-api>
+  <label>
+    Ihre Email:
+    <input class="inp" type="email" name="email" autocomplete="email">
+  </label>
+
+  <label>
+    Bestätigen Sie, dass Sie ein Mensch sind:
+    <div null-turnstile="request-reset"></div>
+    <div class="tip">Falls der Test nicht lädt, versuchen Sie, die Seite neuzuladen.</div>
+  </label>
+
+  <input class="but" type="submit" value="Anfragen!">
+  <div class="error" null-data="^request-error"></div>
+</form>
