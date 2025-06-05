@@ -69,9 +69,10 @@ const { polling } = require("./lib/contracts");
     "nulls": "./site",
     "static": "./static",
     "uploads": false,
-    "ready": () => console.log("Server up!"),
+    "ready": () => console.log("Website up!"),
     "port": PROD ? parseInt(process.argv[2]) : 8080,
     "forceHTTPS": PROD,
+    "proxies": PROD ? 1 : 0, // cloudflared tunnel
     "domain": "gXLg.dev",
     "preprocessor": icons,
     "textprocessor": (txt, req) => translate(txt, req.lang),
