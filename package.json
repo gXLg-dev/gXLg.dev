@@ -17,12 +17,12 @@
   },
   "homepage": "https://github.com/gXLg-dev/gXLg.dev#readme",
   "dependencies": {
-    "badb": "^1.3.0",
-    "nodemailer": "^6.10.0",
-    "nulls": "^2.9.2",
-    "nulls-auth": "^2.0.0",
+    "badb": "^1.5.0",
+    "nodemailer": "^7.0.10",
+    "nulls": "^2.12.2",
+    "nulls-auth": "^2.0.9",
     "nulls-state": "^1.2.0",
-    "nulls-turnstile": "^1.0.4",
-    "stripe": "^18.1.1"
+    "nulls-turnstile": "^1.0.5",
+    "stripe": "^18.5.0"
   }
 }
