@@ -2,7 +2,6 @@
 <div class="text">
   <div class="title" null-data="(r, s, d) => d.name"></div>
   <div>
-    <a class="link" null-attr="(r, s, d) => ({ 'href': '/de/terms/' + d.terms })" null-data="(r, s, d) => 'AGB (' + d.terms + ')'"></a> (geltend für diesen Vertrag)<br>
     Vertrag ID: <span class="keyword" null-data="(r, s, d) => d.id"></span><br>
     Sprache: <span class="keyword" null-data="(r, s, d) => d.lang"></span><br>
     Zahlung: Von Stripe verwaltet<br>
@@ -11,6 +10,32 @@
     Startdatum: Sofort nach dem Abschluss<br>
     Enddatum: <span null-data="(r, s, d) => d.host == 0 ? 'Nicht anwendbar auf Einmalzahlungen' : 'Jederzeit kündigbar'"></span>
     <br><br>
-    <div null-arg="async (r, e, d) => await require('./lib/contracts').get_url(d.id)" null-container="#de/partials/payment.html"></div>
+    <form class="f" action="/api/contracts/accept" null-api>
+      <label class="inline">
+        <input class="inp" type="checkbox" name="terms">
+        Ich bestätige, dass ich die für diesen Vertrag geltende
+        <a class="link" null-attr="(r, s, d) => ({ 'href': '/static/legal/terms/' + d.terms + '/' + d.lang + '.pdf' })" null-data="(r, s, d) => 'AGB (' + d.terms + ')'"></a>
+        gelesen und verstanden habe.
+      </label>
+      <label class="inline">
+        <input class="inp" type="checkbox" name="cancellation">
+        Ich bestätige, dass ich die
+        <a class="link" href="/static/legal/cancel/de.pdf">Widerrufsbelehrung</a>
+        gelesen und verstanden habe.
+      </label>
+      <label class="inline">
+        <input class="inp" type="checkbox" name="withdrawal">
+        Ich verlange ausdrücklich und stimme zu, dass der Anbieter
+        vor Ablauf der gesetzlichen Widerrufsfrist mit der Ausführung
+        der beauftragten Dienstleistung beginnt. Mir ist bekannt,
+        dass ich mein Widerrufsrecht verliere, sobald die Dienstleistung
+        vollständig erbracht wurde.
+      </label>
+      <input type="hidden" name="id" null-attr="(r, s, d) => ({ 'value': d.id })">
+
+      <input class="but" type="submit" value="Mit Zahlung fortfahren (stripe.com)">
+
+      <div class="error" null-data="^accept-error"></div>
+    </form>
   </div>
 </div>

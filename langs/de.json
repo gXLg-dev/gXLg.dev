@@ -13,7 +13,9 @@
   "title.terms": "AGB",
   "title.notfound": "Nicht Gefunden",
   "title.noauth": "Bitte Anmelden",
-  "title.langs": "Sprachen",
+  "title.services": "Dienstleistungen",
+  "title.projects": "Projektübersicht",
+  "title.legal": "Rechtliches",
 
   "error.field": "Das Feld '$1' ist Pflicht und darf nicht leer gelassen werden",
   "error.turnstile": "Der Test konnte nicht verifiziert werden, bitte erneut versuchen",
@@ -28,6 +30,8 @@
   "error.nouotp": "Die Authenticator Daten konnten nicht aktualisiert werden",
   "error.cancel": "Sie müssen Ihre Absicht zum Kündigen des Vertrags bestätigen",
   "error.nocancel": "Der Vertrag konnte nicht gekündigt werden, bitte kontaktieren Sie mich",
+  "error.accept": "Sie müssen alle Bedingungen akzeptieren",
+  "error.noaccept": "Der Vertrag konnte nicht abgeschlossen werden, bitte kontaktieren Sie mich",
 
   "field.email": "Email",
   "field.password": "Passwort",
@@ -54,6 +58,8 @@
   "messages.cancelled": "Die Kündigung des Vertrags wurde angefragt! Es kann bis zu 10 Minuten dauern, die Anfrage zu bearbeiten.",
 
   "email.auto": "Das ist eine automatisierte Nachricht von gXLg.dev",
+  "email.self": "Selbstständige Softwareentwicklung",
+  "email.germany": "Deutschland",
   "email.image": "Bild nicht angezeigt",
 
   "email.password.subject": "Passwort",
@@ -116,5 +122,5 @@
   "email.contract.cancellable": "Jederzeit kündigbar",
   "email.contract.view": "Sie können den Vertrag online ansehen und verwalten",
   "email.contract.still": "Sie können den Vertrag immernoch online ansehen",
-  "email.contract.terms": "AGB, die für diesen Vertrag gelten, wurden als Anhang hinzugefügt."
+  "email.contract.terms": "Bedingungen, die für diesen Vertrag gelten, wurden als Anhang hinzugefügt."
 }

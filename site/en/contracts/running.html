@@ -2,7 +2,7 @@
 <div class="text">
   <div class="title" null-data="(r, s, d) => d.name"></div>
   <div>
-    <a class="link" null-attr="(r, s, d) => ({ 'href': '/en/terms/' + d.terms })" null-data="(r, s, d) => 'Terms and Conditions (' + d.terms + ')'"></a> (applicable to this contract)<br>
+    <a class="link" null-attr="(r, s, d) => ({ 'href': '/static/legal/terms/' + d.terms + '/' + d.lang + '.pdf' })" null-data="(r, s, d) => 'Terms and Conditions (' + d.terms + ')'"></a> (applicable to this contract)<br>
     Contract ID: <span class="keyword" null-data="(r, s, d) => d.id"></span><br>
     Language: <span class="keyword" null-data="(r, s, d) => d.lang"></span><br>
     Payment: Handled by Stripe<br>
@@ -12,7 +12,7 @@
     End Date: Cancellable any time
     <br><br>
     <div null-data="^cancel-success"></div>
-    <form class="f" action="/api/contracts/cancel" null-api="$./lib/contracts/cancel.js" null-access="(r, s, d) => r.admin || r.hashed(r.auth) == d.user">
+    <form class="f" action="/api/contracts/cancel" null-api="$./lib/contracts/cancel.js">
       <input type="hidden" name="id" null-attr="(r, s, d) => ({ 'value': d.id })">
       <label class="inline">
         <input class="inp" name="agree" type="checkbox">

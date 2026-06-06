@@ -2,7 +2,7 @@
 <div class="text">
   <div class="title" null-data="(r, s, d) => d.name"></div>
   <div>
-    <a class="link" null-attr="(r, s, d) => ({ 'href': '/de/terms/' + d.terms })" null-data="(r, s, d) => 'AGB (' + d.terms + ')'"></a> (geltend für diesen Vertrag)<br>
+    <a class="link" null-attr="(r, s, d) => ({ 'href': '/static/legal/terms/' + d.terms + '/' + d.lang + '.pdf' })" null-data="(r, s, d) => 'AGB (' + d.terms + ')'"></a> (geltend für diesen Vertrag)<br>
     Vertrag ID: <span class="keyword" null-data="(r, s, d) => d.id"></span><br>
     Sprache: <span class="keyword" null-data="(r, s, d) => d.lang"></span><br>
     Zahlung: Von Stripe verwaltet<br>

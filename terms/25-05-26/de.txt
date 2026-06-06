@@ -1,13 +1,16 @@
 # Allgemeine Geschäftsbedingungen
 
 Gültig ab: 26.05.2025 (26. April 2025)
+
 Anbieter: Dmitry Plesunov, Jedelstetten 24, 82269 Geltendorf, Deutschland  
+
 Rechtsform: Selbstständige Softwareentwicklung nach deutschem Recht  
+
 Kontakt: gxlg@gmx.de
 
 
 
-0. Begriffsdefinitionen
+## 0. Begriffsdefinitionen
 
 In diesen Allgemeinen Geschäftsbedingungen werden folgende Begriffe verwendet:
 
@@ -33,7 +36,7 @@ In diesen Allgemeinen Geschäftsbedingungen werden folgende Begriffe verwendet:
 
 
 
-1. Mein Angebot
+## 1. Mein Angebot
 
 Ich entwickle und hoste digitale Projekte - wie Websites, Web-Apps und Bots
 (z. B. für Discord oder Telegram). Sie zahlen eine einmalige Entwicklungsgebühr
@@ -41,7 +44,7 @@ sowie eine monatliche Hosting-Gebühr für die Nutzung meiner Infrastruktur.
 
 
 
-2. So kommt ein Vertrag zustande
+## 2. So kommt ein Vertrag zustande
 
 Bevor etwas berechnet wird, sprechen wir über Ihr Projekt. Der Ablauf ist wie folgt:
 
@@ -56,7 +59,7 @@ Kein Projekt geht online, keine Abrechnung findet statt.
 
 
 
-3. Zahlung
+## 3. Zahlung
 
 * Alle Zahlungen erfolgen über Stripe.
 * Sie erhalten für jede Zahlung eine Quittung.
@@ -69,7 +72,7 @@ Kein Projekt geht online, keine Abrechnung findet statt.
 
 
 
-4. Kündigung
+## 4. Kündigung
 
 Sie können Ihr Abo jederzeit über das Kundenportal kündigen. Dabei gilt:
 
@@ -88,7 +91,7 @@ Vertragsangebot (ohne erneute Entwicklungsgebühr, falls keine Änderungen nöti
 
 
 
-5. Verfügbarkeit und Service
+## 5. Verfügbarkeit und Service
 
 * Ich strebe eine Verfügbarkeit rund um die Uhr an.
   Ausnahmen gelten bei externen Ereignissen (z. B. Stromausfälle, Naturkatastrophen).
@@ -101,13 +104,13 @@ Vertragsangebot (ohne erneute Entwicklungsgebühr, falls keine Änderungen nöti
 
 
 
-6. Nutzungslimits
+## 6. Nutzungslimits
 
 * Für jedes Projekt wird ein RAM-Limit festgelegt, das wir vorher gemeinsam abstimmen.
 
 
 
-7. Rechtmäßige Nutzung und Verantwortung
+## 7. Rechtmäßige Nutzung und Verantwortung
 
 * Sie dürfen keine illegalen Inhalte oder Dienste auf meinen Servern betreiben.
 * Ebenso ist es untersagt, gegen Nutzungsbedingungen Dritter zu verstoßen
@@ -119,7 +122,7 @@ Vertragsangebot (ohne erneute Entwicklungsgebühr, falls keine Änderungen nöti
 
 
 
-8. Urheberrecht
+## 8. Urheberrecht
 
 * Der Quellcode des Projekts bleibt mein Eigentum, außer wir vereinbaren
   ausdrücklich eine Open-Source-Freigabe.
@@ -129,7 +132,7 @@ Vertragsangebot (ohne erneute Entwicklungsgebühr, falls keine Änderungen nöti
 
 
 
-9. Beschwerden und Streitfälle
+## 9. Beschwerden und Streitfälle
 
 * Beschwerden zum Hosting oder meiner Leistung können direkt an mich gerichtet werden.
 * Beschwerden zu Ihrem Projekt oder der Nutzererfahrung müssen Sie selbst bearbeiten.
@@ -138,7 +141,7 @@ Vertragsangebot (ohne erneute Entwicklungsgebühr, falls keine Änderungen nöti
 
 
 
-10. Schlussbemerkung
+## 10. Schlussbemerkung
 
 * Diese AGB können künftig aktualisiert werden.
 * Änderungen gelten nur für neue Verträge.

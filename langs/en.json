@@ -13,7 +13,9 @@
   "title.terms": "Terms and Conditions",
   "title.notfound": "Not Found",
   "title.noauth": "Please Login",
-  "title.langs": "Languages",
+  "title.services": "Offered Services",
+  "title.projects": "Projects Showcase",
+  "title.legal": "Legal",
 
   "error.field": "The field '$1' is required and can't be empty",
   "error.turnstile": "Test couldn't be verified, try again",
@@ -28,6 +30,8 @@
   "error.nouotp": "Couldn't update Authenticator data",
   "error.cancel": "You have to confirm your intent of cancellation",
   "error.nocancel": "Could not cancel the contract, please contact me",
+  "error.accept": "You have to accept all conditions",
+  "error.noaccept": "Could not proceed with the contract, please contact me",
 
   "field.email": "Email",
   "field.password": "Password",
@@ -54,6 +58,8 @@
   "messages.cancelled": "The contract was requested to be cancelled! It may take up to 10 minutes to be processed.",
 
   "email.auto": "This is an automated email from gXLg.dev",
+  "email.self": "Self-employed Software Development",
+  "email.germany": "Germany",
   "email.image": "Image not displayed",
 
   "email.password.subject": "Password",
@@ -116,5 +122,5 @@
   "email.contract.cancellable": "Cancellable any time",
   "email.contract.view": "You can view and manage your contract online",
   "email.contract.still": "You can still view your contract online:",
-  "email.contract.terms": "Terms and Conditions applying to this contract have been added as attachment."
+  "email.contract.terms": "Conditions applying to this contract have been added as attachment to this email."
 }

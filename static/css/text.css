@@ -24,9 +24,13 @@
 .card>.text {
   min-width: fit-content;
   font: var(--text);
+  line-height: 22px;
   padding: 5px 20px 5px 20px;
   overflow-wrap: break-word;
   background-color: var(--yellow);
+}
+.card>.text>div {
+  margin-bottom: 10px;
 }
 .card>.text .title {
   margin: 4px 0 4px 0;
@@ -43,7 +47,7 @@
   left: 10px;
 }
 
-
+/* forms */
 .f {
   display: flex;
   flex-direction: column;
@@ -90,6 +94,7 @@
   color: var(--orange);
 }
 
+/* keywords */
 .keyword {
   margin: 0;
   font-size: 14px;
@@ -100,30 +105,56 @@
   background-color: var(--yellow);
 }
 
+
 .badges>span {
   margin: 5px;
 }
 
 .photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+
   margin: 10px;
-  max-width: 300px;
-  min-width: 100px;
+  width: 90%;
 }
 .photo>img {
+  display: block;
   border: 2px solid var(--black);
-  width: 100%;
+  width: 95%;
+  max-width: 600px;
 }
 
 /* mobile */
 @media screen and (max-width: 1000px) {
   .card {
-    max-width: calc(100vw - 30px);
+    max-width: 90%;
   }
 }
 
 /* desktop */
 @media screen and (min-width: 1001px) {
   .card {
-    max-width: calc(100vw - 300px);
+    max-width: 80%;
   }
+}
+
+.progress {
+  --progress: 50%;
+  width: 100%;
+  height: 12px;
+  padding: 3px;
+  box-sizing: border-box;
+  background: var(--white);
+}
+.progress::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: var(--progress);
+  background: var(--black);
+}
+.col2 .progress {
+  background-color: var(--yellow);
 }

@@ -38,5 +38,6 @@ table {
 
 ul {
   margin: 6px 0 6px 0;
-  padding-left: 18px;
+  padding-left: 12px;
+  list-style-type: "> ";
 }

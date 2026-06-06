@@ -1,13 +1,16 @@
 # Terms and Conditions
 
 Effective as of: 26.05.2025 (April 26, 2025)
+
 Operator: Dmitry Plesunov, Jedelstetten 24, 82269 Geltendorf, Germany
+
 Legal Structure: Self-employed software development under German law
+
 Contact: gxlg@gmx.de
 
 
 
-0. Definitions
+## 0. Definitions
 
 In these Terms and Conditions, the following terms are used:
 
@@ -32,7 +35,7 @@ In these Terms and Conditions, the following terms are used:
 
 
 
-1. What I Offer
+## 1. What I Offer
 
 I develop and host digital projects - such as websites,
 web apps, and bots (e.g. Discord or Telegram bots).
@@ -41,7 +44,7 @@ monthly hosting fee for using my infrastructure.
 
 
 
-2. How We Make a Contract
+## 2. How We Make a Contract
 
 Before anything is billed, we'll talk about your project.
 Here's how it goes:
@@ -57,7 +60,7 @@ No project goes live, no billing takes place.
 
 
 
-3. Payment
+## 3. Payment
 
 * All payments are processed via Stripe.
 * You'll receive a receipt for each payment.
@@ -69,7 +72,7 @@ No project goes live, no billing takes place.
 
 
 
-4. Cancellation
+## 4. Cancellation
 
 You can cancel your subscription at any time via your customer portal.
 Here's what happens:
@@ -88,7 +91,7 @@ changes are needed).
 
 
 
-5. Uptime and Service
+## 5. Uptime and Service
 
 * I aim for 24/7 uptime. Exceptions include things outside my control
   (e.g. power outages, natural disasters).
@@ -101,13 +104,13 @@ changes are needed).
 
 
 
-6. Usage Limits
+## 6. Usage Limits
 
 * Each project has a RAM usage limit, which we'll agree on beforehand.
 
 
 
-7. Legal Use and Responsibility
+## 7. Legal Use and Responsibility
 
 * You must not host illegal content or services on my servers.
 * You're also not allowed to violate the terms of third-party
@@ -119,7 +122,7 @@ changes are needed).
 
 
 
-8. Intellectual Property
+## 8. Intellectual Property
 
 * I retain ownership of the project code unless we explicitly agree to open-source it.
 * If open-sourced, I'll release it under the MIT License.
@@ -127,7 +130,7 @@ changes are needed).
 
 
 
-9. Complaints and Disputes
+## 9. Complaints and Disputes
 
 * Complaints about the service or hosting can be sent directly to me.
 * Complaints about your project or user experience must be handled by you.
@@ -136,7 +139,7 @@ changes are needed).
 
 
 
-10. Final Notes
+## 10. Final Notes
 
 * These Terms may be updated in the future.
 * Changes only apply to new contracts.

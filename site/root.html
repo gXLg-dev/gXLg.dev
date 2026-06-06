@@ -6,8 +6,9 @@
 
     <link rel="icon" href="/static/logo.jpg">
     <title null-data="r => r.page.title"></title>
- 
+
     <link rel="stylesheet" href="/static/css/main.css">
+    <script src="/static/js/lang.js"></script>
   </head>
 
   <body>
@@ -20,20 +21,34 @@
             </div>gXLg.dev
           </a>
         </div>
-        <a id="langs" null-attr="r => ({ 'href': '/' + r.lang + '/langs' })">
-          <svg width="30" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="45" stroke-width="5" fill="none" />
-            <ellipse cx="50" cy="50" rx="25" ry="45" stroke-width="3" fill="none" />
-            <ellipse cx="50" cy="50" rx="10" ry="45" stroke-width="2" fill="none" />
-            <line x1="5" y1="50" x2="95" y2="50" stroke-width="3">
-          </svg>
-        </a>
-        <a id="account" null-attr="r => ({ 'href': '/' + r.lang + '/account' })">
-          <svg width="30" viewBox="0 0 100 100">
-            <circle cx="50" cy="20" r="20" />
-            <path d="M10,100 H90 V70 Q50,30,10,70 V100 Z" />
-          </svg>
-        </a>
+
+        <div id="langs">
+          <a id="langs-button" href="#">
+            <svg width="30" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" stroke-width="5" fill="none" />
+              <ellipse cx="50" cy="50" rx="25" ry="45" stroke-width="3" fill="none" />
+              <ellipse cx="50" cy="50" rx="10" ry="45" stroke-width="2" fill="none" />
+              <line x1="5" y1="50" x2="95" y2="50" stroke-width="3">
+            </svg>
+          </a>
+          <div id="langs-dropdown" class="hidden">
+            <div class="card">
+              <div class="text">
+                <a class="language" null-attr="r => ({ 'href': '/de' + r.fullUrl })">Deutsch</a>
+                <a class="language" null-attr="r => ({ 'href': '/en' + r.fullUrl })">English</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="account">
+          <a id="account-button" null-attr="r => ({ 'href': '/' + r.lang + '/account' })">
+            <svg width="30" viewBox="0 0 100 100">
+              <circle cx="50" cy="20" r="20" />
+              <path d="M10,100 H90 V70 Q50,30,10,70 V100 Z" />
+            </svg>
+          </a>
+        </div>
       </div>
 
       <div id="content" null-container="r => r.lang + '/' + r.page.id"></div>

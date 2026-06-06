@@ -21,6 +21,15 @@
   <div class="error" null-data="^invite-error"></div>
 </form>
 
+<form class="f" action="/api/admin/delete-customer" null-api="$./lib/auth/delete-customer.js" null-access="r => r.admin">
+  <label>
+    Delete customer (make sure they have no running contracts):
+    <input class="inp" type="email" name="email" autocomplete="off">
+  </label>
+  <input class="but" type="submit" value="Delete">
+  <div class="error" null-data="^delete-error"></div>
+</form>
+
 <form class="f" action="/api/admin/transparency-add" null-api="$./lib/transparency/add.js" null-access="r => r.admin">
   <label>
     Value:
@@ -29,6 +38,10 @@
   <label>
     Text:
     <input class="inp" type="text" name="text" autocomplete="off">
+  </label>
+  <label>
+    Date in YYYY-MM-DD format:
+    <input class="inp" type="text" name="date" autocomplete="off">
   </label>
   <input class="but" type="submit" value="Make transparent!">
   <div class="error" null-data="^transparency-error"></div>

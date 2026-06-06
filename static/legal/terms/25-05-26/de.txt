@@ -1,0 +1,144 @@
+# Allgemeine Geschäftsbedingungen
+
+Gültig ab: 26.05.2025 (26. April 2025)
+Anbieter: Dmitry Plesunov, Jedelstetten 24, 82269 Geltendorf, Deutschland  
+Rechtsform: Selbstständige Softwareentwicklung nach deutschem Recht  
+Kontakt: gxlg@gmx.de
+
+
+
+0. Begriffsdefinitionen
+
+In diesen Allgemeinen Geschäftsbedingungen werden folgende Begriffe verwendet:
+
+* "Ich" / "mir" / "mein(e)":
+  Bezieht sich auf den Anbieter: Dmitry Plesunov,
+  tätig als selbstständiger Softwareentwickler in Deutschland.
+
+* "Sie" / "Ihnen" / "Ihr(e)":
+  Bezieht sich auf Sie als Kundin oder Kunde,
+  also die Person oder Organisation, die meine
+  Dienstleistungen in Anspruch nimmt.
+
+* "wir" / "uns":
+  Wird verwendet, wenn eine Zusammenarbeit oder ein gemeinsamer
+  Schritt zwischen Anbieter und Kunde gemeint ist
+
+* "Projekt":
+  Bezeichnet das von mir für Sie erstellte digitale Produkt
+
+* "Vertrag":
+  Meint die Vereinbarung zwischen Ihnen und mir über die Entwicklung
+  und/oder das Hosting eines Projekts.
+
+
+
+1. Mein Angebot
+
+Ich entwickle und hoste digitale Projekte - wie Websites, Web-Apps und Bots
+(z. B. für Discord oder Telegram). Sie zahlen eine einmalige Entwicklungsgebühr
+sowie eine monatliche Hosting-Gebühr für die Nutzung meiner Infrastruktur.
+
+
+
+2. So kommt ein Vertrag zustande
+
+Bevor etwas berechnet wird, sprechen wir über Ihr Projekt. Der Ablauf ist wie folgt:
+
+* Wir besprechen Ihre Anforderungen.
+* Ich setze das Projekt für Sie um.
+* Sie haben 2 Wochen Zeit, alles zu testen - ohne Zahlungspflicht.
+* Wenn Sie zufrieden sind, bestätigen Sie den Vertrag in Ihrem Online-Konto.
+* Nach der Bestätigung erfolgt die Abrechnung über Stripe und Ihr Projekt geht online.
+
+Wenn Sie den Vertrag nicht bestätigen, passiert nichts:  
+Kein Projekt geht online, keine Abrechnung findet statt.
+
+
+
+3. Zahlung
+
+* Alle Zahlungen erfolgen über Stripe.
+* Sie erhalten für jede Zahlung eine Quittung.
+* Das monatliche Abo beginnt erst nach Vertragsbestätigung.
+* Rückerstattungen für den laufenden Abrechnungszeitraum sind ausgeschlossen,
+  da zuvor eine Testphase stattgefunden hat.
+* Sollte Ihre Zahlungsmethode fehlschlagen, kontaktieren Sie mich bitte.
+  Ich storniere dann den aktuellen Vertrag und sende Ihnen einen neuen,
+  sobald die Zahlungsdaten aktualisiert wurden.
+
+
+
+4. Kündigung
+
+Sie können Ihr Abo jederzeit über das Kundenportal kündigen. Dabei gilt:
+
+* Die Kündigung wird im System sofort wirksam (innerhalb von ca. 10 Minuten).
+* Ihr Projekt bleibt bis zum Ende des aktuellen Abrechnungszeitraums online,
+  danach wird es deaktiviert.
+* Falls Sie versehentlich gekündigt haben oder eine neue Zahlungsart benötigen,
+  kontaktieren Sie mich - wir können einen neuen Vertrag starten.
+* Falls Sie keinen Zugriff mehr auf Ihr Konto oder Ihre E-Mail-Adresse haben,
+  schreiben Sie mir mit einem Nachweis (z. B. Rechnungen) - ich kümmere mich
+  um die Kündigung oder einen Transfer.
+
+Ein gekündigter Vertrag kann nicht reaktiviert werden.  
+Wenn Sie weitermachen möchten, erhalten Sie ein neues
+Vertragsangebot (ohne erneute Entwicklungsgebühr, falls keine Änderungen nötig sind).
+
+
+
+5. Verfügbarkeit und Service
+
+* Ich strebe eine Verfügbarkeit rund um die Uhr an.
+  Ausnahmen gelten bei externen Ereignissen (z. B. Stromausfälle, Naturkatastrophen).
+* Liegt die Ausfallursache bei mir, behebe ich sie schnellstmöglich.
+* Bei Ausfällen, die länger als einen vollen Monat andauern, erstatte
+  ich die Hosting-Gebühr für diesen Monat.
+* Backups sind auf Anfrage verfügbar, werden aber nicht automatisch erstellt.
+* Support umfasst Fehlerbehebungen und grundlegende Hilfe.  
+  Umfangreichere Funktionswünsche erfordern einen neuen Vertrag.
+
+
+
+6. Nutzungslimits
+
+* Für jedes Projekt wird ein RAM-Limit festgelegt, das wir vorher gemeinsam abstimmen.
+
+
+
+7. Rechtmäßige Nutzung und Verantwortung
+
+* Sie dürfen keine illegalen Inhalte oder Dienste auf meinen Servern betreiben.
+* Ebenso ist es untersagt, gegen Nutzungsbedingungen Dritter zu verstoßen
+  (z. B. Discord-Bots, die ohne Zustimmung Daten sammeln).
+* Bei illegalem oder missbräuchlichem Verhalten behalte ich mir vor, den Dienst
+  fristlos zu kündigen.
+* Für von Nutzer*innen erstellte Inhalte und die rechtliche Konformität Ihres
+  Projekts sind ausschließlich Sie verantwortlich.
+
+
+
+8. Urheberrecht
+
+* Der Quellcode des Projekts bleibt mein Eigentum, außer wir vereinbaren
+  ausdrücklich eine Open-Source-Freigabe.
+* Bei Open-Source-Veröffentlichung erfolgt dies unter der MIT-Lizenz.
+* Sie haben das Recht, den Dienst während der Laufzeit des Vertrags zu
+  nutzen und zu betreiben.
+
+
+
+9. Beschwerden und Streitfälle
+
+* Beschwerden zum Hosting oder meiner Leistung können direkt an mich gerichtet werden.
+* Beschwerden zu Ihrem Projekt oder der Nutzererfahrung müssen Sie selbst bearbeiten.
+* Es gilt deutsches Recht.
+* Gerichtsstand für alle Streitigkeiten ist Deutschland.
+
+
+
+10. Schlussbemerkung
+
+* Diese AGB können künftig aktualisiert werden.
+* Änderungen gelten nur für neue Verträge.

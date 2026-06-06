@@ -50,13 +50,19 @@ const { polling } = require("./lib/contracts");
     "plugins": [auth, state, turnstile],
     "hook": async (req, res) => {
       if (req.method == "GET") {
+
         const path = (req.path ?? "").split("/").filter(p => p);
         let lang = defaultLang;
         if (["de", "en"].includes(path[0])) {
           lang = path.shift();
         }
+        const fpath = path.join("/");
+        const query = (new URLSearchParams(req.query)).toString();
+        const fullUrl = (fpath ? ("/" + fpath) : "") + (query ? ("?" + query) : "");
+
         req.lang = lang;
         req.page = getPage(path, req.auth);
+        req.fullUrl = fullUrl;
 
         res.status(req.page.status);
         res.putState("lang", lang);

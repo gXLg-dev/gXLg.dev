@@ -16,9 +16,11 @@
   width: 30px;
   padding-left: 10px;
   padding-right: 10px;
+}
+#account-button {
   fill: var(--beige);
 }
-#account:hover {
+#account-button:hover {
   fill: var(--yellow);
 }
 
@@ -26,10 +28,22 @@
   width: 30px;
   padding-left: 10px;
   padding-right: 10px;
+  position: relative;
+}
+#langs-button {
   stroke: var(--beige);
 }
-#langs:hover {
+#langs-button:hover {
   stroke: var(--yellow);
+}
+#langs-dropdown {
+  position: absolute;
+  top: 37px;
+  right: 0px;
+  z-index: 2;
+}
+.hidden {
+  display: none !important;
 }
 
 .logo {
