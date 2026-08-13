@@ -1,5 +1,6 @@
 {
   "ram": 300,
+  "setup": ["git pull", "npm ci"],
   "record": "gxlg.dev",
   "start": "node --max-old-space-size=300 index.js {port}"
 }
