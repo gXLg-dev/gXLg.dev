@@ -1,4 +1,4 @@
-<div class="title">Admin Tools</div>
+<div class="title">ADMIN TOOLS</div>
 
 <div class="title">All Contracts</div>
 <div>
@@ -11,6 +11,15 @@
   Cancelled/Paid:
   <ul null-list="async r => (await require('./lib/contracts').get_all_contracts()).filter(c => c.status >= 3).reverse()" null-container="#common/partials/contract.html"></ul>
 </div>
+
+<form class="f" action="/api/admin/relogin" null-api="$./lib/auth/admin-login.js" null-access="r => r.admin">
+  <label>
+    Re-login as customer:
+    <input class="inp" type="email" name="email" autocomplete="off">
+  </label>
+  <input class="but" type="submit" value="Re-login">
+  <div class="error" null-data="^relogin-error"></div>
+</form>
 
 <form class="f" action="/api/admin/invite" null-api="$./lib/auth/invite.js" null-access="r => r.admin">
   <label>
