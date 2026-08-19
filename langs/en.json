@@ -29,9 +29,10 @@
   "error.nochange": "Couldn't change password",
   "error.nouotp": "Couldn't update Authenticator data",
   "error.cancel": "You have to confirm your intent of cancellation",
-  "error.nocancel": "Could not cancel the contract, please contact me",
+  "error.nocancel": "Could not cancel the contract due to a technical problem, please contact me",
   "error.accept": "You have to accept all conditions",
-  "error.noaccept": "Could not proceed with the contract, please contact me",
+  "error.noaccept": "Could not confirm the contract due to a technical problem, please contact me",
+  "error.doneaccept": "The contract was already confirmed, please be patient - you will receive a confirmation in ca. 10 minutes",
 
   "field.email": "Email",
   "field.password": "Password",

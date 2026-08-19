@@ -29,9 +29,10 @@
   "error.nochange": "Das Passwort konnte nicht verändert werden",
   "error.nouotp": "Die Authenticator Daten konnten nicht aktualisiert werden",
   "error.cancel": "Sie müssen Ihre Absicht zum Kündigen des Vertrags bestätigen",
-  "error.nocancel": "Der Vertrag konnte nicht gekündigt werden, bitte kontaktieren Sie mich",
+  "error.nocancel": "Der Vertrag konnte wegen einem technischen Fehler nicht gekündigt werden, bitte kontaktieren Sie mich",
   "error.accept": "Sie müssen alle Bedingungen akzeptieren",
-  "error.noaccept": "Der Vertrag konnte nicht abgeschlossen werden, bitte kontaktieren Sie mich",
+  "error.noaccept": "Der Vertrag konnte wegen einem technischen Fehler nicht abgeschlossen werden, bitte kontaktieren Sie mich",
+  "error.doneaccept": "Der Vertrag wurde bereits abgeschlossen, bitte haben Sie etwas Geduld - in ca. 10 Minuten bekommen Sie eine Bestätigung",
 
   "field.email": "Email",
   "field.password": "Passwort",
