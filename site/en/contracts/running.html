@@ -12,7 +12,7 @@
     End Date: Cancellable any time
     <br><br>
     <div null-data="^cancel-success"></div>
-    <form class="f" action="/api/contracts/cancel" null-api="$./lib/contracts/cancel.js">
+    <form class="f" action="/api/contracts/cancel" null-api="$./lib/contracts/cancel.js" null-access="r => r.auth">
       <input type="hidden" name="id" null-attr="(r, s, d) => ({ 'value': d.id })">
       <label class="inline">
         <input class="inp" name="agree" type="checkbox">

@@ -10,7 +10,7 @@
     Start Date: Immediately after conclusion<br>
     End Date: <span null-data="(r, s, d) => d.host == 0 ? 'Not applicable for a one-time payment' : 'Cancellable any time'"></span>
     <br><br>
-    <form class="f" action="/api/contracts/accept" null-api="$./lib/contracts/accept.js">
+    <form class="f" action="/api/contracts/accept" null-api="$./lib/contracts/accept.js" null-access="r => r.auth">
       <label class="inline">
         <input class="inp" type="checkbox" name="terms">
         I confirm that I have read and understood the

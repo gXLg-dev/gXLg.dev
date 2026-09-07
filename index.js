@@ -1,7 +1,8 @@
 const PROD = !!process.argv[2];
 const base = PROD ? "https://gxlg.dev" : "http://localhost:8080";
 const defaultLang = "de";
-module.exports = { PROD, base, defaultLang };
+const LANGS = ["de", "en"];
+module.exports = { PROD, base, defaultLang, LANGS };
 
 const { nulls } = require("nulls");
 const nauth = require("nulls-auth");
@@ -53,7 +54,7 @@ const { polling } = require("./lib/contracts");
       if (req.method == "GET") {
         const path = (req.path ?? "").split("/").filter(p => p);
 
-        if (["de", "en"].includes(path[0])) {
+        if (LANGS.includes(path[0])) {
           lang = path.shift();
         }
         res.putState("lang", lang);
@@ -83,7 +84,17 @@ const { polling } = require("./lib/contracts");
     "textprocessor": (txt, req) => translate(txt, req.lang),
 
     "redirects": {
-      "/:lang/landing/contracts/:id": req => "/" + req.params.lang + "/account/contracts/" + req.params.id
+      "/:lang/landing/contracts/:id": req => {
+        const contract = req.params.id;
+        if (!(/^[0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12}$/.test(contract))) {
+          return "/";
+        }
+        let lang = req.params.lang;
+        if (!LANGS.includes(lang)) {
+          lang = defaultLang;
+        }
+        return "/" + lang + "/account/contracts/" + contract;
+      }
     }
   });
 
