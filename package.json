@@ -18,8 +18,8 @@
   "homepage": "https://github.com/gXLg-dev/gXLg.dev#readme",
   "dependencies": {
     "badb": "1.5.0",
-    "nodemailer": "9.0.3",
-    "nulls": "2.13.5",
+    "nodemailer": "9.1.1",
+    "nulls": "2.13.6",
     "nulls-auth": "2.2.1",
     "nulls-state": "1.2.1",
     "nulls-turnstile": "1.0.7",
